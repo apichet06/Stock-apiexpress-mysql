@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "12345678",
+    "username": "g2c44ze77vvoznr3f2ih",
+    "password": "pscale_pw_22f6Z1FSsPhoLZgP0cLeglS9kumQMpzNOqlOUle8NWo",
     "database": "stock_goods",
-    "host": "127.0.0.1",
+    "host": "aws.connect.psdb.cloud",
     "dialect": "mysql"
   },
   "test": {
