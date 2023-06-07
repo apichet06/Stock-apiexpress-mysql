@@ -14,7 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "g2c44ze77vvoznr3f2ih",
+    "username": "u7fjsmfjoxgw9k9qp31b",
     "password": "pscale_pw_369DzaI5oOvdF5pKejyelsFWLpl1TEb0ymlfFCefJNf",
     "database": "stock_goods",
     "host": "aws.connect.psdb.cloud",
