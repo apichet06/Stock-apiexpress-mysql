@@ -14,8 +14,13 @@
     "dialect": "mysql"
   },
   "production": {
+<<<<<<< HEAD
     "username": "oolgc5xusw2dvoo9tb0v",
     "password": "pscale_pw_iDgoLNlUso7LeKK4eQmKqU3i7hKb0PzOmWL8NuGlSxQ",
+=======
+    "username": "u7fjsmfjoxgw9k9qp31b",
+    "password": "pscale_pw_369DzaI5oOvdF5pKejyelsFWLpl1TEb0ymlfFCefJNf",
+>>>>>>> 3445bbb069bf26ec7ecce78679c98f00bc319deb
     "database": "stock_goods",
     "host": "aws.connect.psdb.cloud",
     "dialect": "mysql"
