@@ -2,9 +2,7 @@
   "name": "server",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "nodemon ./bin/www"
-  },
+  "scripts": {},
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
