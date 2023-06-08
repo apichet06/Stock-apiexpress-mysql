@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "oolgc5xusw2dvoo9tb0v",
-    "password": "pscale_pw_iDgoLNlUso7LeKK4eQmKqU3i7hKb0PzOmWL8NuGlSxQ",
-    "database": "stock_goods",
-    "host": "aws.connect.psdb.cloud",
+    "username": "b78236ff44746f",
+    "password": "3db1a7ca",
+    "database": "heroku_36783b8d45b8c25",
+    "host": "us-cdbr-east-06.cleardb.net",
     "dialect": "mysql"
   }
 }
