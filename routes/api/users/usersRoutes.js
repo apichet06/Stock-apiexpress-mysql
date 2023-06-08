@@ -81,7 +81,7 @@ router.post('/', uploadProfileImage.single('file'),
       res.status(400).send({ error: { errors: errors.array() } })
     } else {
 
-      if (req.file !== undefined || req.file !== null) {
+      if (req.file !== undefined && req.file !== null) {
         req.body.ProfileImage = req.file.path;
 
       }
