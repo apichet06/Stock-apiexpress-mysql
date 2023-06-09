@@ -83,7 +83,6 @@ router.post('/', uploadProfileImage.single('file'),
 
       if (req.file !== undefined && req.file !== null) {
         req.body.ProfileImage = req.file.path;
-
       }
       User.create(req.body).then(data => {
         res.send({ success: { message: "Insert Successfully.", result: data } });
@@ -109,16 +108,21 @@ router.put('/:id', requireJwt, uploadProfileImage.single('file'),
       res.status(400).send({ error: { errors: errors.array() } })
 
     } else {
-      if (req.file !== undefined || req.file !== null) {
-        req.body.ProfileImage = req.file.path;
 
+
+      if (req.file !== undefined && req.file !== null) {
+        req.body.ProfileImage = req.file.path;
       }
+
+
       User.update(req.body, { where: { id: req.params.id } }).then(data => {
         if (data[0] > 0) {
           User.findByPk(req.params.id).then(data => {
             res.send({ success: { message: "Updated Successfully.", result: data } })
           })
+
         } else {
+
           res.status(400).send({ error: { name: "DataNotFound", message: "DataNotFound" } })
         }
       }).catch((err) => {
@@ -127,7 +131,6 @@ router.put('/:id', requireJwt, uploadProfileImage.single('file'),
       })
 
     }
-
 
   })
 
