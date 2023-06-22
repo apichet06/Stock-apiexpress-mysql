@@ -19,7 +19,7 @@ async function generateID() {
     const lastProductType = await product_type.findOne({
         order: [['type_id', 'DESC']]
     });
-
+    // console.log(lastProductType);
     if (lastProductType) {
         const lastID = lastProductType.type_id;
         const newID = 'TYP' + (parseInt(lastID.slice(3)) + 1).toString().padStart(2, '0');
@@ -32,7 +32,9 @@ async function generateID() {
 router.post('/', async (req, res, next) => {
 
     const newID = await generateID();
+
     req.body.type_id = newID;
+    req.body.type_date = new Date().toISOString();
     product_type.create(req.body).then((data) => {
         res.send({ success: { massege: "Insert Successfully.", result: data } })
     }).catch((err) => {
@@ -54,7 +56,6 @@ router.put('/:id', (req, res, next) => {
         } else {
             res.status(400).send({ error: { name: "DataNotFound", message: "DataNotFound" } });
         }
-
 
     }).catch((err) => {
         const { original: { code, sqlMessage } } = err;
